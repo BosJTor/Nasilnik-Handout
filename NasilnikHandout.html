@@ -1,0 +1,988 @@
+<style>
+
+
+/* Background */
+  .phb{ background-image: url('https://gmbinder.com/images/KN1O92T.png') }
+  .phb{ background-size: cover }
+
+/* Notes */
+  .phb section blockquote {background-color: #f6e5d4}
+  .phb hr + section blockquote tr:nth-child(odd) td {background-color: transparent;}
+
+/* Headers: */
+  .phb h1{
+    text-align:center
+  }
+
+.noindent {
+    text-indent: 1em;
+    margin-left: -1em
+}
+
+.phb .classTable td{
+    padding: 3px;
+}
+
+.phb .descriptive table tr:nth-child(odd) td {background-color: #eae4d8}
+}
+
+/* God Table Formatting */
+  .phb#p21 h5{
+    text-align:center;
+
+  }
+
+  .phb#p21 .pageNumber{
+    right      : 12px;
+    color      : rgba(0, 0, 0, 0.5)
+    position   : absolute;
+    bottom     : 38px;
+    width      : 50px;
+    text-align : center;
+  }
+
+/* Tables */
+  table tr:nth-child(odd) td {background-color: #cccccc}
+
+/* Footer */
+  .phb .pageNumber {color: rgba(0, 0, 0, 0.5)}
+  .phb .footnote {color: rgba(0, 0, 0, 0.5)}
+  .phb:nth-child(odd):after{
+    content          : '';
+    position         : absolute;
+    bottom           : -3px;
+    left             : 10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://gmbinder.com/images/p7wvb4z.png');
+    background-size  : cover;
+}
+
+
+
+.phb:nth-child(even):after{
+    content          : '';
+    position         : absolute;
+    bottom           : -3px;
+    left             : -10px;
+    z-index          : -1;
+    height           : 336px;
+    width            : 100%;
+    background-image : url('https://gmbinder.com/images/p7wvb4z.png');
+    background-size  : cover;
+    transform: scaleX(-1);
+}
+
+
+/* Page Number */
+.phb .pageNumber{
+    position   : absolute;
+    bottom     : 30px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber{
+    right      : 12px;
+}
+
+.phb .pageNumber.auto{
+    position   : absolute;
+    bottom     : 38px;
+    width      : 50px;
+    text-align : center;
+}
+.phb:nth-child(even) .pageNumber.auto{
+    left      : 12px;
+}
+.phb:nth-child(odd) .pageNumber.auto{
+    right      : 12px;
+}
+
+
+/* Cover Page Formatting */
+  .phb#p1:after{
+    background-image : url('https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png');
+  }
+
+/* Splash pages: */
+  .phb#p4:after{
+    background-image : url('https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png');
+  }
+
+  .phb#p4 {
+    background-image : url(https://previews.dropbox.com/p/thumb/AAZVBM_PNtBLJ_jhdxqZlQDkyIAG5v-P1qRgcoYcCFiszU0B09P612nrHQ2oUGgJ1ouG7kgBE0yvuxDYlVKLXE7x5KvZtYVHjtL9piLTS6vuu4TpSu9P_UW4_HCCbzZlQ8pQtJJPKyQCrKchnFEL_nGWFLQwzNci4fYwkbTTJmO9aIx2GB23jeaPFphZEfUWyqecqdnCCXDRo-6Vun3uglTN6xqpzAGkCkznPSBWuMhUAb78Czqw-WJzSFMQBtf4iqdk3WLILR3weIkxhsKdjoQEhv2aYoRhnrxL_H8v5hUoGIZWNxBYsQmZNm6nJmO7VxM6gwnDTYUnMzWyn36mt1RW/p.png?size=1280x960&size_mode=3);
+
+  }
+
+  .phb#p12 {
+    background-image : url(https://previews.dropbox.com/p/thumb/AAYpg9SbauP3wxHIBHQLnMt19SFO0RX-2LlTowUzdjcfvC5cs-D3GhdyMvtYCqDlq06_ZZcgVwVHRUVbSE_8PW93mWMfuitr7wJ2ol5wc7BQoO6SRuZb1WEia2w12j0PFyvAXH0iGZL8XaGx9nmPzigXKQKYAutnAN46pn6FQKYp05wn0JhoQhkpOI_NeQ0QoqbPPJIUiqKs1iMD8BjLEWWpQPXQl9IwxvhpXDihEsuh3YeoKQmpYTznKTHWSQb-edX_0IC-GdSeQOLnoEcx3rgfM6TGkHJEpgUmIEl49QFBDJ6F67LMPOs0WPAKZ-_vsVdUlXlTgOeRcTu96qVu6IJzDriZOPvuayQIjZuv04fZtdOqZl938obKohOco8qNuRoZhrxnGbgzQiJZRtBq3Cb8/p.png?size=1280x960&size_mode=3);
+
+  }
+
+  .phb#p12:after{
+    background-image : url('https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png');
+  }
+
+  .phb#p16:after{
+    background-image : url('https://upload.wikimedia.org/wikipedia/commons/c/ca/1x1.png');
+  }
+
+  .phb#p16 {
+    background-image : url(https://previews.dropbox.com/p/thumb/AAaSAc07MbNIbY3d-OnVv3g5uBOmwDw8sbauOe8SIW5dvTxZYr3Faf-b5jwDDNVdrq2hRlny6y2Nek7nFY5GOvLvPYq3pi1N6I7KDbkEXSsYWIf9mxERudnPQ-2qDaJKtBVhRqUCfiu_9rlzXqEScDUTMGHshz-F4H9ookq9YgadMqHjIiX6iUT0JAKBXxHpOL1ISd7PbKxA9dzBhxkw2QLlhmqThOOfyi9_cPIKq4DDDVG22jKeet-_ESVSHf7jADsVKBmSwJdNXONJwQZc1oDR4WnPglcThOFpL_liPXVw8ekh4rBeZkTvBEVJW14EuGCEiIXSphqp4rlvu7TOOOiTQJOB2Xyqnfb5xMv21X-CxlXqOQ3PBQ1oemw5elR-1ky2vqj3byHZT4Oc7lDJyomC/p.png?size=1280x960&size_mode=3);
+
+  }
+
+
+
+</style>
+
+<img src='https://previews.dropbox.com/p/thumb/AAZlNlMvBK3J2TsGS_vJFws-1fWjsXdU2inIG2xqu-ImdkxF08lkN2VlmyiEuI5rQi5titKIhaN978pM6pl8cRiLzk2qI2tNwwhPQ7NoeKg38G6wnmteZIkC0GzHIO8HsyVDLLWWEDHdZTgZubb813BLpRkZtZ6tmZTXbPP5RDz5LgQ7fq6ly7zTm-JwRnlD6kIdaqzJBAF62wfRuwAAVbCrxiP2ZNHbws-UQ7MdVw9AfsrQPRpOqsBClnDNyHWZ7U2wBoWVz-6kVQust1EOVfKGnVRclv9OHw5K7giEhKQO2wKZs4bBcke28JrGDPgGokw8bwh1gZK0djUHc2eiY36iGVmbwZA4XWtaE7AwpMiG-Bq-Lc5RBQr-geD1DY8xSdx2yssZc4RmIhqQOa8Z4aBu/p.png?size=2048x1536&size_mode=3' class='cover-image' />
+
+<div class='cover-diamond'></div>
+
+<div class='cover-header'>the Mines of Mezankhil</div>
+
+<div class='cover-footer'>Ale? Check. Beard? Check. Axe? Check. Certain death? Let's do this!</div>
+
+\pagebreak
+
+<br><br><br><br>
+
+<div class='toc'>
+
+##### Table Of Contents
+- **[1 The Campaign ](#p4)**
+  - [1.1 Playstyle](#p4)
+  - [1.2 Player Buy-In](#p4)
+  - [1.3 Session Zero](#p4)
+    - [1.3.1 Roll for Stats](#p4)
+    - [1.3.2 Class Selection](#p4)
+    - [1.3.3 Race Selection](#p4)
+    - [1.3.4 Early Levels](#p4)
+- **[2 Homebrew Rules](#p6)**
+  - [2.1 Quick Notes:](#p6)
+  - [2.2 Class Abilities:](#p7)
+    - [2.2.1 Monk - Way of the Four Elements](#p7)
+    - [2.2.2 Sorcerer ](#p7)
+  - [2.3 Concordance:](#p8)
+  - [2.4 Conditions:](#p8)
+  - [2.5 Downtime:](#p8)
+  - [2.6 Honor Score:](#p9)
+    - [2.6.1 "I Know a Guy..."](#p9)
+    - [2.6.2 Mission Failure](#p9)
+  - [2.7 Flanking:](#p9)
+  - [2.8 Inspiration:](#p9)
+  - [2.9 Overland Travel:](#p10)
+  - [2.10 Retainers:](#p11)
+  - [2.11 Spells:](#p11)
+  - [2.12 Stronghold Actions:](#p12)
+  - [2.13 Traps:](#p12)
+  - [2.14 Warfare:](#p12)
+- **[3 Dwarf Lore Nonsense](#p14)**
+  - [3.1 History:](#p14)
+  - [3.2 Religion:](#p14)
+    - [3.2.1 List of Gods:](#p14)
+    - [3.2.2 Saints by Domain](#p15)
+  - [3.3 Society:](#p15)
+    - [3.3.1 Clans:](#p15)
+    - [3.3.2 Naming:](#p16)
+- **[Appendices](#p18)**
+  - [Appendix A: Clan Names](#p18)
+  - [Appendix B: War Clan Names](#p20)
+  - [Appendix C: Common Dwarvish Given Names](#p21)
+  - [Appendix D: Gods, Saints and Numen](#p22)
+
+</div>
+
+<img src='https://previews.dropbox.com/p/thumb/AAaGRnY8avMPmMi6o40_WmrCX3xSEm_Dq535GdMTL0bu5GRKW2PA1kvWQgH0i6-9wyil1Wmb5Rjt_9zx8nzqDQ4lnpo29mqG_FT96RiWLz-s2JjQ_kchx0ykkHYH2HZStHzU_WPatQ8E-DZw-2-S-Xg4No5LpJVKX9uo80Zh3x5kQUqDWyTRX9jUhLix0-CdjA1acH9rSf62xLMzxG0KKrZRdmlHSF6jdvp6738aBGd8L0AWX0pFGea-AKL0oBU6JU_cjR4btykzGUJEmmK4y1EzWiU6umSF4IJgpFnx9aLL-0P6YtD8NtturvoEaw9rN7Q--pPWSHUvbmpjvrngjcyH/p.png?size_mode=5' style='position:absolute;bottom:100px;right:65px;width:370px'/>
+
+\pagebreakNum
+# The Campaign
+
+In the past age, your dwarven kin lost their ancestral kingdoms to fire giants, dragons and worse. Now, the newly coronated king has aspirations of reclaiming your lost lands, but first he must bring the disparate clans, kingdoms and fiefdoms together and unite them whether it be by finesse or by force. You are the king’s most trusted advisors and agents and friends. You have your own lives, but every once in a while, he calls upon you to band together and complete a task he can trust with only you.
+
+## Playstyle
+The king will provide your team a mission (or more likely a choice of missions) and you guys will spend the next several sessions (I would assume 6–10) attempting to complete said mission. Then, you’ll have MONTHS of downtime to do what you want, including leveling up. This means a few things: 1) the “failure state” will not be, my character died; it will be, we failed the mission. That is to say, I don’t plan on challenging you with deadly encounters. Death is possible, it’s still D&D, but not my main method of challenging the party. 2) Your characters should have ambition outside of solely completing the missions.
+
+## Player Buy-In
+1. You're a team. Unlike Silfrek campaign, you’re not strangers tied together by a magic pact, you’ve known each other and worked together for years.
+2. You're loyal to the king and he is loyal to you. I guarantee that there will be no plot reversal where he is actually evil or whatever, but that also means that you guys “obey” his orders, eg. you accept his quests. This means you, the players, have say in who this king is. I am not going to force you to be friends with a dickbag.
+3. You get out what you put in. Downtime will play an important role in your character’s abilities as well as how they interact with the world. But this requires self-motivation so your character should have a good idea of what they do when they are not adventuring.
+
+## Session Zero
+### Roll for Stats
+
+- Roll 4d6, drop the lowest and apply them straight down the line, ie. first roll is your strength, second is dexterity
+- After rolling your six base stats, roll 2d4+8 and this is your “Honor” score. More about this in the rest of the document.
+
+### Class Selection
+No celestial warlocks, arcana clerics, or divine sorcerers. All other combos are good.
+
+\columnbreak
+### Race Selection
+- I would greatly prefer everyone to play dwarves and in order to incentivize this, if you play a dwarf, you get a free **feat** and expertise in any **artisan tool**. See the [**Feats**](#p5) bullet point, the [**Trade Names**](#p15) section, and [**Appendix A: Clan Names**](#p17) for more details on this. Something to note about dwarves, they cannot swim due to their unusually high density preventing them from being able to float.
+- As usual, regardless of the race selection, the +1 stat for any race can be placed in any stat that doesn’t already have a bonus. The mountain dwarves +2 must be placed in two different stats if you wish to move it from strength.
+- No high elves; know that tieflings, wood elves, and half-orcs will be viewed as distinctly unwelcome in dwarven society as they war with these groups frequently.
+
+### Early Levels
+You guys start at level 5 and we will spend the second half of session zero, fleshing out what your characters did in the early levels with the king (before he was king).
+
+\pagebreakNum
+
+\pagebreakNum
+# Homebrew Rules
+
+As seems to be the desire of every DM, I have added or changed a few rules for this campaign. For the most part, these rules either a) make the tone of the rules fit the game I'm envisioning, b) empowered things that I though were a little weak, or c) added something that I thought sounded cool.
+
+Particularly for tone, I have drawn many rules from a 3rd party supplement, **Strongholds and Followers** (**SHaF**). A copy of the PDF can be found on my Dropbox [here](https://www.dropbox.com/s/v2drc5qngde1l41/%5B5e%5D%20Strongholds%20and%20Followers.pdf?dl=0). I strongly suggest supporting them and getting your own copy, but I know that is not entirely feasible and want to make sure everyone has access to the rules. I've changed a few things and will do my best to summarize the rules but for lengthy rule sets I will reference a page number.
+
+
+## Quick Notes:
+- **Critical Hits** A critical hit does max damage die plus a normal roll.
+
+<div class='descriptive'>
+
+**Naivara**, the level 5 assassin, crits with a dagger while flanking and has a dexterity of 18. She inflicts: 4 (crit dagger damage) + 18 (crit sneak attack damage) + 4 (dexterity modifier) + 3 (rolled dagger damage) + 11 (rolled sneak attack damage) = 40 piercing damage.
+
+</div>
+
+- **Counterspell** Counterspelling a counterspell yields a chance at a wild magic surge. Roll a d10, if the number is less than or equal to the original spell countered, a wild magic surge goes off from the original caster.
+- **Death - Reviving** In order to come back from death, you must roll d20 and beat a DC of 10 + # of times you have died (including this one). If you return, your Constitution is reduced by 1. If you died in battle, your Honor is reduced by 1.
+- **Dropping to 0 Hit Points** If you drop to 0 hit points, you are not unconscious, instead you are debilitated (see [***Conditions***](#p7)). At the start of your turn, you make a death saving throw as normal. If you fail two saving throws your fall unconscious. If you fail three, you die.
+- **Encumberance** Instead of encumbrance rules, you have a number of “inventory slots” equal to your Strength score. Light armor takes up 2 slots, medium armor 3 slots and heavy armor 4 slots. A heavy and/or two-handed weapon takes up 2 slots. Ammunition takes up 1 slot per 20 pieces of ammunition. Otherwise an item takes up 1 slot per 10 pounds. Ex: a 1 lb. scroll case fills 1 slot, a 6 lbs. manacles fills 1 slot, and a 12 lbs. climber's kit fills 2.
+
+\columnbreak
+- **Feats** You can’t gain feats from leveling up. They can be gained through downtime activities however.
+    - The **Lucky** feat is not permitted.
+    - For the feats **Great Weapon Master** and **Sharpshooter**, instead of -5 to hit and +10 to damage, you may attack without your proficiency bonus and add twice your proficiency bonus to the damage. As a prerequisite, you must initially have proficiency with the weapon. Otherwise the feats are unchanged.
+    - Racial feats from Xanathar's Guide to Everything and the weapon feats from the  [Unearthed Arcana: Feats](http://dnd.wizards.com/articles/features/feats) supplement are allowed.
+- **Languages known** In character creation, you know a number of languages equal to your Intelligence modifier (min: 1, dwarvish). For backgrounds, you don’t gain any languages. Instead, regardless of background, you gain proficiency in any two relevant skills and proficiency in one vehicle, tool, game, or instrument. Useful languages for this part of the world: ormeswyrean (common), halfling, elvish, reaver (orcish), runic (giant), abyssal and necrosis (undercommon).
+- **Leveling up - Hit Points** If your roll for hp when you level up, reroll 1s.
+- **Mounts** In order to gain your proficiency bonus in attack rolls while mounted, you must have proficiency with mounts. Fighters, paladins and rangers gain proficiency in mounts at first level.
+- **Short Rest - Healing** In order to regain HP (use hit dice) on a rest, you must expend one use from a healing kit. Each kit has 5 uses. Failed death saves recover after at least a short rest where a use of a healing kit is used.
+- Clerics and paladins can’t cast *animate dead* or *create undead* unless they are Death domain or Oathbreakers, respectively.
+
+<img src='https://previews.dropbox.com/p/thumb/AAZW2hdqVrEyLN76s6GfO5NbrrjDISCDlLFMZASCDjBB1Sijl0BPdWATe8BtkwSP81CXcjnBl2BN5IRQUe-2bPCS9WH1GaY-AMPCkh4J5pqUPk080bsIrCx0l0dval-Gr8LexhMmqqlME5cOVaWlgCb_r_X1dTrL5fzY4EfyV6JTO8B3uFGuI9ChwSRhrsYTTxVRTL5EQW35cLNvUmZAj2vN7dyXidqK83RHSksWFyBdeez4L1sElq1q_wUdVpxuuv-d1eHaEV2wPtVxYpF9QTp_RVDDBchDEDyvHIbobtLAP89-Oekl-9G4GafXl9doFtTdl2ozpbtty7hta9mKV4Lp/p.jpeg?size_mode=5' style='position:absolute;bottom:55px;right:90px;width:260px'/>
+
+\pagebreakNum
+## Class Abilities:
+*These are subject to adjustment if found to be unbalanced.*
+
+### Monk - Way of the Four Elements
+
+I find the four elements monk options a little underwhelming so I've buffed them up a bit. I increased the number of disciplines known and added a bunch of options by way of increasing the available spell list. The options in *italics* are from the original Way of the Four Elements.
+
+##### Disciplines Known
+
+<div style='column-count:2;'>
+
+| Monk Level | Disciplines Known |
+|:---:|:---:|
+|1|0|
+|2|0|
+|3|2|
+|4|2|
+|5|2|
+|6|4|
+|7|4|
+|8|4|
+|9|4|
+|10|4|
+
+| Monk Level | Disciplines Known |
+|:---:|:---:|
+|11|6|
+|12|6|
+|13|6|
+|14|6|
+|15|6|
+|16|6|
+|17|8|
+|18|8|
+|19|8|
+|20|8|
+
+</div>
+
+### Sorcerer
+Added two metamagic options.
+- ***Mobile Spell:*** When you cast a spell that creates an area of effect that has a duration longer than 1 round and less than 24 hours, you can spend 1 sorcery points to be able to shift the spell’s area up to half the spells range on your turn as a bonus action for the duration.
+- ***Protected Spell:*** When you cast a spell, you can spend 2 sorcery points so that your spell requires an ability check to counterspell or dispel regardless of the level the countering spell is cast at. This ability check is rolled at disadvantage.
+
+\columnbreak
+
+<div class='classTable'>
+
+##### Elemental Discipline List
+| Elemental Discipline | Min. Level | Ki Cost |
+|:---|:---:|:---:|
+|Absorb Elements|3|2|
+|Burning Hands|3|2|
+|Earth Tremor|3|2|
+|*Fangs of the Fire Snake*|3|2|
+|*Fist of Unbroken Air*|3|2|
+|Fog Cloud|3|2|
+|Gust of Wind|3|2|
+|*Shape the Flowing River*|3|2|
+|Thunderwave|3|2|
+|Water Breathing (self only)|3|2|
+|*Water Whip*|3|2|
+|Flaming Sphere|6|3|
+|Hold Person|6|3|
+|Invisibility<sup>+</sup>|6|3|
+|Maximillian's Earthen Grasp|6|3|
+|Misty Step|6|3|
+|Pyrotechnics|6|3|
+|Shatter|6|3|
+|Warding Wind|6|3|
+|Erupting Earth|11|4|
+|Fireball|11|4|
+|Fly<sup>+</sup>|11|4|
+|Gaseous Form<sup>+</sup>|11|4|
+|Haste<sup>+</sup>|11|4|
+|Protection from Energy<sup>+</sup>|11|4|
+|Tidal Wave|11|4|
+|Wall of Water|11|4|
+|Control Water|17|5|
+|Fire Shield|17|5|
+|Stone Shape|17|5|
+|Stoneskin|17|5|
+|Storm Sphere|17|5|
+|Wall of Fire|17|5|
+|Cone of Cold|17|6|
+|Control Winds|17|6|
+|Hold Monster|17|6|
+|Steel Wind Strike|17|6|
+|Wall of Ice|17|6|
+|Wall of Stone|17|6|
+
+<sup>+</sup> Self only
+</div>
+
+\pagebreakNum
+## Concordance:
+
+Every character is encouraged to select a God/Saint (or Numen, see section on Dwarven Religion) to follow, as clerics and paladins are not the only ones who regularly worship them, merely the only ones to draw power directly from them. Doing so allows you to gain favor with your god (I’m just going to say god from now on, but I mean whomever you worship) and call upon them in your time of need. Your concordance with your god can allow them to provide help with something as simple as information or as powerful as sending an extraplanar ally to fight alongside you.
+
+As an action you **pray** to your god to ask for aid. Roll a d100. The DC starts at 100 but is modified by a variety of factors, some of which are listed below. Additional ideas can be found in **SHaF** on page 30 although I may change the numbers denoted. [*Note: All numbers are subject to change if they are too high or low, airing on the side of making it easier to gain a benefit*]
+
+- For each week that has passed since you last called for aid, reduce the DC by 1 to a maximum of 20.
+- A cleric with the divine intervention ability reduces the DC by 20. A 20th level cleric reduces the DC by 90 instead.
+- If you have recently sacrificed on an allied altar reduce the DC by 5
+- If you have recently converted an enemy altar reduce the DC by 10
+- If you have recently converted followers to your saint/god reduce the DC by 2 per new follower to a maximum of 16.
+- If you have a temple stronghold, reduce the DC by 15.
+- If you are praying directly at an altar, reduce the DC by 10.
+- If you are asking for a physical manifestation increase the DC by 3 times the CR of the monster (?)
+- Sinning in the eyes of your god increases the DC for each sin by 1-10, depending on its severity.
+
+What constitutes "sacrificing" and how to "convert an altar" vary based on the saint or god that you follow and will have a Religion (Intelligence), Religion (Charisma), or Religion (Honor) check associated with them. This is an opportunity to be creative.
+
+Succeeding depends on your current situation. If you are mid-battle, you can ask for the direct aid of a powerful summoned creature who follows your orders. Or, you and and your allies may be given a temporary boon. Alternatively, if you are at an altar, outside of combat, you may gain a less powerful but more permanant boon or be given a valuable artifact that will aid you in your quest.
+
+Failing your concordance roll by more than 80 curses you as your god is upset with the form and timing of your request. This curse lasts the rest of the mission and cannot be dispelled by the *remove curse* or *greater restoration* spells. Failing by more than 60 burdens you and grants you disadvantage on attack rolls and ability checks until your next long rest, a *remove curse* or *greater restoration* spell removes this effect, but you cannot remove it from yourself.
+
+\columnbreak
+<div class='descriptive'>
+
+##### In Combat:
+
+**Dorsidhion** lowers his head in silent prayer and asks for aid from his god, ***Eldath***. He had recently purified one of her precious ley nodes and blessed the waters of a serene grove tainted by a nearby town, moreover it has been many moons since he asked for her direct involvement, so she is pleased with him and grants his request.
+
+The bandits surrounding the party become pacified, as if effected by the *calm emotions* spell, and Dorsidhion and all of his allies gain the effects of the *bless* spell for the duration of the encounter, but get to roll a d6 instead of a d4.
+
+##### At an Altar:
+
+**Belarra**, seeking knowledge and power, pays tribute to a ***Being from Beyond*** at an altar she built in the Spirit Realm. The ***Being from Beyond*** is pleased with the progress Belarra has made in researching the Spirit Realm and sees promise in her ambition. They grant her request and bequeath her with a *blessed Orb of Dragonkind*. One that can not only call dragons, but bend them to her will.
+
+</div>
+
+## Conditions:
+- ***Bloodied***: If your current hit points is less than or equal to half your maximum hit points.
+- ***Debilitated***: You fall prone and can’t stand up. You automatically fail strength and dexterity saves. You can’t concentrate on spells. Attacks within 5 ft. are automatically critical hits. The only actions you can take are dash, disengage and dodge. You can’t take bonus actions or reactions.
+- ***Dazzled***: You have disadvantage on attack rolls and perception checks.
+
+## Downtime:
+
+For this campaign, downtime should be used more for advancing internally motivated character goals than activities that directly influence your missions such as crafting healing potions or poisons. Crafting is certainly still an option, but it shouldn't be for the sole purpose of stocking the party with consumables.
+
+Additionally, there is nothing stopping you from researching a threat or learning of some far off treasure and calling the party together to go fight/plunder it. Eventually the king will have a job for you, there's just too much to do, but if you or one of your compatriots has an idea for a job no one is stopping you.
+
+This is one of the main benefits of having a stronghold.
+
+
+\pagebreakNum
+## Honor Score:
+The honor score is used in a variety of different circumstances. It determines how many retainers you begin with (see [***Retainers***](#p10) section), effects the “I know a guy…” skill check and determines the effects of a mission failure. In addition, when speaking with dwarves, you can choose to replace Persuasion (Charisma) and Intimidation (Charisma) checks with Persuasion (Honor) and Intimidation (Honor), respectively.
+
+Honor is considered an ability score and therefore can be increased through Ability Score Improvements from leveling.
+
+
+### "I Know a Guy..."
+Once before leaving for a mission, you can use “I know a guy…”. Describe the loose characteristics of an NPC, how you’re familiar with them, and how they may be useful; then make an Honor skill check. This check will determine what the current state of your relationship or how useful they will be in the moment. This NPC can provide advice, information, supplies, or anything else that the party might need, but may also come with a cost or additional favor.
+
+### Mission Failure
+If the mission fails, everyone must make an Honor saving throw. On a success, you are able to withstand the loss of face with minimal cost. On a failure, your reputation has been tainted and you must spend time to repair it. This will have effects during your downtime and either limit the number of activities you can do during downtime, or impose disadvantage on any skill checks. Consecutive failures may lead to your Honor score decreasing.
+
+Failing while owning a stronghold effects the morale of your soldiers and happiness of your peasants. They want a strong, honorable leader! Upstarts or nearby rivals may see this as an opportunity to foster rebellions. You will need to spend downtime in order to quell rebellions and regain popularity amongst your people.
+
+\columnbreak
+
+## Flanking:
+Flanking provides advantage on melee attacks that are made when an ally who isn’t incapacitated is standing on the opposite side of an enemy from you. You don’t gain this benefit if you are being flanked. Creatures that don’t have an obvious forward facing (eg. a gibbering mouther) or who have an increased awareness through additional eyes (eg. a beholder) cannot be flanked.
+
+
+## Inspiration:
+To use inspiration, you can either do the same as in the PHB, where you grant yourself advantage on any ability check, saving throw, or attack roll. This must be declared before the roll. Or, you can use your reaction to take an **Inspired Reaction** where you put yourself in danger to aid an ally, granting advantage to the ally. If this subjects you to a saving throw you wouldn’t originally have taken, you too have advantage.
+
+To gain inspiration, you must **Claim a Setback**, where you impose disadvantage on yourself for an ability check, saving throw, or attack roll based on one of your Personal Characteristics (Personal Traits, Flaws, etc.). Failure of this roll must have significant narrative weight, eg. no spamming disadvantage on pointless rolls to constantly have inspiration.
+
+<div class='descriptive'>
+
+##### Inspired Reaction:
+
+The white dragon breathes an icy torrent towards **Corgryn**. **Mordacai** uses his inspiration to take an ***Inspired Action***. As a reaction, he runs forward to shield **Corgryn** from the blast, subjecting himself to the dragon's attack. Both make a Constitution save with advantage.
+
+##### Claiming a Setback:
+
+**Tim-Tam**, who has the flaw *'I can't focus on anything for more than a second,'* is too distracted by all of the alien mechanisms around him to notice the illithid's eyes glowing with psionic energy. He ***Claims a Setback*** and has disadvantage on the Intelligence saving throw from the illithid's mind blast, but gains inspiration.
+
+</div>
+
+<img src='https://previews.dropbox.com/p/thumb/AAaG7yNrjSULkpdf7gg04j3JIGIALc0K7pkhaLXOmshgwTSPtxeOD7iEd-1d8u6ahFa68oEC7-wHpfoglUm87SWqntchjWk96EJ5IQBthKehkS67AbVTNge75ekNzXt2PAhsv0t06d_fPUUh9pPDud1sByjZvpacwfIrAYLCe3wxY59FHL7MSVVA5LRPNzeeOf85hthz-lj3CV2ojpAuUCbaHVJ7Cb-26AOvjOWgsH0BJyAJN-rgF6-AbVNWOL8FddXJqlGEcPSr0JjhyxdZZ0DarNHkV2fEpq9_2vXJhlmLGHQXc9MTjptMrZdcbV9yZtnHvLXrSj2LzQr8kc3IK7hC/p.jpeg?size=2048x1536&size_mode=3' style='position:absolute;bottom:50px;right:100px;width:580px'>
+
+\pagebreakNum
+## Overland Travel:
+Most overland travel at the start of a mission is met with a skill challenge of getting there. This will likely change at higher levels when the travel is less dangerous in comparison. The distance will determine the number of necessary successes and the territory being traveled through will determine the DC. For a given mission you may have multiple choices on how to get there and these would be two major factors to consider along with total trip time.
+
+For a skill challenge, once a skill is succeeded, the group cannot use it again. Failing a check causes the whole party to **Suffer a Consequence**. Once the party has received enough successes, they are immediately placed in an encounter without having time to heal or rest.
+
+
+If the check failed by 5 or less, the party suffers a minor consequence. Otherwise, the party suffers a major consequence. If a consequence would cause you to go unconscious, you must choose a different consequence instead. One of the consequences is giving the DM one or more DM points. A DM point is a resource that the DM can spend only during the following encounter to empower the antagonists. For example, giving the "boss" 1 legendary resistance or using it as inspiration to grant a creature advantage. Each player may choose the specific consequences, but examples of minor and major consequences are given in the following table.
+
+\columnbreak
+
+> ##### Overland Travel Consequences
+>
+>| **Minor Failure** | **Major Failure**|
+>| :---: | :---: |
+>|Take damage equal to 2 times your level| Take damage equal to  3 times your level|
+>|Spend 2 levels of spell slots| Spend 4 levels of spell slots|
+>|Spend 1 warlock spell slot| Spend 2 warlock spell slots|
+>|Spend 4 ki points| Spend 6 ki points|
+>|Spend 1 an ability that recharges on a short rest| Spend 1 use of an ability that recharges on a long rest|
+>|Gain 1 level of exhaustion| Gain 2 levels of exhaustion|
+>|Use 2 potions of healing| Use 4 potions of healing or 2 potions of greater healing|
+>|Spend 3 hit dice| Spend 5 hit dice |
+>|Give the DM 1 DM point| Give the DM 2 DM points|
+
+
+<img src='https://previews.dropbox.com/p/thumb/AAYlcBxR2g-7_E1HDwKqj1AMkMtxabUbck4WwCmVan8O7g8eDWdewCxQvspnRkkAJO0fb5if9JW95G9MZQeTab8E8_7nZl6KDgTvRNZkUS7DwUEf4RCy1J_NHsf3Q3w4t9FDBN_4is_H3rp6Tuamcpxx5Z8kXQTJHof7XA757PogxJWChgd034zH85eFXc8uMCh6UGXGFReP--Z-lzhZF0eAOWLd7UJVcF4JYeGbor_P5HFdRSHZoIvokvxhhQUrl_9ob2GZ1S66grCpouOooidTXGffoF2oX9d8Jdr145mSL9sXt5qCZidXJPzpYMbUlWoZZFQxwaE5doOQpGMPsA8D/p.png?size=2048x1536&size_mode=3' style='position:absolute;bottom:80px;right:60px;width:680px'>
+
+\pagebreakNum
+## Retainers:
+A mechanic stolen from **SHaF** (page 68–81), retainers are NPCs roughly under the PCs control and can be used both during missions (on the mission itself or in a separate mission in parallel) and downtime to complete tasks. These retainers level with the PCs but stay roughly 2 levels behind to a maximum of 7th level. You start the campaign with a number of retainers equal to your Honor score modifier and can gain more through roleplay, building/repairing a stronghold, or purchasing their services.
+
+
+## Spells:
+
+- The following cantrips have a casting time of bonus action, instead of action: *dancing lights, druidcraft, gust, light, mending, message, minor illusion, mold earth, prestidigitation, shape water, thaumaturgy*
+- The spells suggestion and mass suggestion have a casting time of 1 minute.
+- *Guidance* can only be cast when the ability check being rolled is for a single action, not a check that happens over an extended period of time. So it would work for the rogue about to pick a lock or the bard about to deceive his way past a guard, but not the ranger keeping watch for the night.
+- In order to make *true strike* actually useful, there are a few changes.
+  - Instead of "on your next turn," you gain advantage on your next attack against the creature until the end of your next turn. (This makes it slightly more beneficial for socerers who can twin it.)
+  - It is *not* concentration.
+  - As part of the cantrip, you gain the benefits of the Dodge action.
+- **Identification**
+    - While the spell is being cast, a creature can make an Arcana (Intelligence) check to identify it. If the creature is a spellcaster, the DC is equal to 10 plus the spell level if the spell is on the creature’s spell list, otherwise the DC is equal to 13 plus the spell’s level. If the creature has the spell known or prepared, they have advantage.
+    - If the caster wishes to disguise which spell is being cast, they can do one or both of two things.
+    - If the spell has somatic components, they can make a Sleight of Hand (Intelligence) check, DC10, to conceal the hand motions. On a success, they add +4 to the DC to identify the spell. On a failure, the spell fails and the action is wasted, but the spell slot isn’t lost.
+    - If the spell has verbal components, they can make a Deception (Intelligence) check, DC10, to complicate the words. On a success, they add +4 to the DC to identify the spell. On a failure, they spell fails and the action is wasted, but the spell slot isn’t lost.
+
+
+\columnbreak
+___
+> ## Bertolf Falkner
+>*medium humanoid (dwarf), neutral good*
+>*level 3 beast lord*
+> ___
+> - **Armor Class** 15 (medium)
+> - **Health Level** 3
+> - **Speed** 25 ft.
+>___
+>|STR|DEX|CON|INT|WIS|CHA|
+>|:---:|:---:|:---:|:---:|:---:|:---:|
+>|14 (+2)|14 (+2)|14 (+2)|14 (+2)|14 (+2)|14 (+2)|
+>___
+> - **Saving Throws** Strength +5, Dexterity +5
+> - **Skills** Animal Handling +5, Insight +3, Medicine +3, Perception +3, Survival +3, Stealth +5
+> - **Damage Resistances** poison
+> - **Senses** darkvision 60 ft., passive perception 12
+> - **Languages** Dwarvish
+> ___
+> ***Health levels.*** As a retainer, Bertolf does not have hit points and instead has health levels equal to his level.
+>
+>When hit, Bertolf makes a Constitution saving throw with a DC equal to the average damage of the attack. On a failure, he loses health levels equal to the number of damage dice. If he succeeds, he takes no damage.
+> ### Actions
+> ***Signature Attack - Heavy Crossbow.*** *Ranged Weapon Attack:* +6 to hit, range 150/600 ft., one target. *Hit* 9 (1d10 + 4)
+>
+> ***Falcon Strike (3/day).*** A falcon appears and attacks at the eyes of a creature within 60 ft.. The target must make a DC13 Dexterity saving throw or take 2 (1d4) slashing damage and be blinded until the end of its next turn.
+
+<img src='https://previews.dropbox.com/p/thumb/AAbsGo3UJ6VHkH1xEh39GDqKt692oSAltn95X4cusee4ipW9INh7021A9ZG3SGC0IN6J1aHA1_CyMd27OL_JzHOaDoHv5Il5RDCCJFjaBl3PgHSEWHT2MVOFEKGNZjT9Legq9pNFdQfuv4IsPhV1H5VPVPC234nMKuc-skvig3g1mmJ9m7Qj8WBYRbjpXtGV4ANSGDUkLMoCdeUs6xpODfL6ADSuSV8HzzMD_9IP0CQkIAcEBxsNAO4cLaiDh41TEf8u24ECyIlmV-T7L90zWaX-ccgVJYGLYCf_KhwmOqfP3eUJpBNB5JAbggjw7vbXeOkr74kRUdEmXEL3JuPwVMY6/p.jpeg?size=2048x1536&size_mode=3' style='position:absolute;bottom:95px;right:65px;width:325px'/>
+
+\pagebreakNum
+
+<br><br>
+
+## Stronghold Actions:
+If you have an established stronghold, you are given a variety of benefits laid out in the supplement Strongholds and Followers. These are specific to class and written out in detail in pages 40-66 of **SHaF**.
+
+<br><br>
+
+
+## Traps:
+When a trap goes off, the DM will say “click” and give a brief, potentially vague, description of the source of the noise. The party will then have an opportunity to react based on the information given. Based on their reaction, this may negate the need for a saving throw (whether that be an auto-success or auto-fail) or provide advantage/disadvantage on the save.
+
+\columnbreak
+## Warfare:
+Pretty much straight up lifted from Strongholds and Followers. The idea being that during an encounter where the party faces off against the leaders of the opposing army, the battle rages on around them. The rules in the book are essentially the beta version, but I like them because they’re simple enough that they don’t add a tremendous amount to your cognitive load, but have enough variety that it’s not just “I roll one more attack” on your turn.
+
+As a summary, each unit has 6 important stats (I'll include their analogous character stat/attribute). **Attack** (to hit), **Power** (damage), **Morale** (loosely Wisdom save), **Defense** (armor class), **Toughness** (N/A), **Size** (hit points). In combat, you roll **Attack** against the targets **Defense** to see if you hit. If you hit, you roll **Power** against the target's **Toughness** to see if you inflict a casualty. Inflicting a casualty reduces the **Size** die by one. Once they reach half their **Size** die, they are considered **diminished**. A **diminished** unit makes a **Morale** check when it suffers a casualty, if it fails they decrement their **Size** die again.
+
+There are a few additional complications, units have special traits and abilities based on their race and equipment level. Furthermore, there is limitations on which unit can target based on the field, I'll leave this to the full chapter in **SHaF**. See pages 233-245 for the full details.
+
+<!--
+
+<img src='https://previews.dropbox.com/p/thumb/AAYZaVmiwWClJkmLCyfcul7fjWnnZk7ZCzs4ip9ckfOKecnF30hEQQhXrWOQDHf6ab0DWUl5LKlKyOFACDR02iimx-iOex6q4-fPCP1OVCvvei0BnzGLZFggcmq20MSMeSH1kwRH09ndZHStm_em51gXWcQgUvoYPBYzeCMgD-8V_Rt_NBh7o_beEBa0wcDCrgSlvO2z-nBXS3FKtZhQDSNOnxLdqoRBjuhkohAumpQGUxWiGccL0ZE2qJAAqXLc3-JojDB9eF84HLCpQh1zXTZyX9uqQqL3M9iA4FD4WU-pAglb1tXP-lfQLiqWX8Ujanbj8qUXoaG-FsaPF_vEJu7M7nyCNeibkcAvrWgpDGu5ZY7IxzuaBQFKPj3x2fZUiVPLiblNDZ9arMqtxNZ-CRbyaSx2zD3XiTGcL_rZAN5dRw/p.jpeg?size=1280x960&size_mode=3' style='position:absolute;bottom:190px;right:50px;width:700px'> -->
+
+
+<img src='https://previews.dropbox.com/p/thumb/AAZUrT9XxbdoXaHCAD-kuMvwI6GYlZfLrTgN6T7GvEbpaBwsO02T5_RhIb6D9VmR0Ga8CScfA--iY_zq8Qh7f1EjWGY-RRzMmMjQa-LE--WFHCI9MnT1QQ348cW1wMKe3fTCljV7J3cRe23C4Jb25ptYBEPfK15Lq5e-wAImBH21VCBxYCC8Jh21ko0heiZ4kNCGM11ufuJIWCJ_TdDlB-mFTuktvVIKrZGOOfkVZ3EuCM8NTshy9lZuLUXlSn8tqACAk7254Gy0q7HeYhaEKICGlHmPhNvGFlZVSEES6WxmZ-6zatwuXHDMwMOjFsFctptPQdj69LFHkw0_RfaeXRDz/p.png?size=2048x1536&size_mode=3' style='position:absolute;bottom:140px;right:50px;width:700px'>
+
+\pagebreakNum
+
+
+\pagebreakNum
+# Dwarf Lore Nonsense
+
+Dwarves are known for their resilience, aggressiveness... and their drinking. In this section, I try and lay out some of the nonsense I came up with that is somewhat unique to my setting and this area of the world. I don't expect you as players to know all of this, but rather I hope it fertile ground for coming up with character ideas during the session zero and beyond that fit thematically within the context of the campaign.
+
+
+
+## History:
+
+I'm just going to leave some bullet points here (I'll likely come back to type this up well, but priorities):
+
+- 2E1476: Delved too deeply and incurred the wrath of a demon horde.
+- 2E1493 In order to regain a foothold in the mountains, the dwarves enslaved the halfling region to South to power the war machine northwards.
+- 2E1511: Those staying behind needed greater power to fight the demons. The call for aid was answered by two gods, Ecknath and Thaidrad, who taught them incredible arcane secrets and an insurmountable iron will for battle.
+  - Others touched by the demon's madness have permeated dwarven society as the mad derro (eg. not a separate race), following their mad God Guncz'zt and his crazed saints.
+- 2E1617 After the Cataclsym, where the demons were wiped away, the mines originally infested with them remained as the one bastion and is still controlled by them to this day.
+- 3E0015 With the fight over, the halflings are released after extreme pressure from Ormeswyr, particularly Caleah, but not without lasting tension between the two races.
+- 3E0056-3E1023 Now, during the age of the Copper-Kings, no Lord has been able to draw enough support to unite the kingdoms and fight back for the land and treasures that were lost.
+  - Fire giants came in and stole much of the Western regions.
+  - A red dragon, Sorilthaxinar the Stark, took most of the land to the East.
+  - The Demons still control the North.
+  - Duergar rule the Underdark.
+  - And there are orcs and elves everywhere else.
+
+
+\columnbreak
+## Religion:
+
+Dwarven society is informed by their gods and their gods are defined by their society, irrevocably linked. The dwarves of the Nasilnik region follow what is considered the “traditional” dwarven pantheon, as opposed to the Caleahn pantheon (the one from the previous campaign). Instead of following gods directly, there are churches devoted to the saints of the small pantheon of dwarven gods. The gods and their most popular saints are listed below. Particularly within the Kingdom, the churches of St. Albrecht the Smith and St. Otto the Golden Hammer are the most popular and powerful, politically and economically.
+
+Moradin and Ulaa are rarely called by name, instead their titles of Steinvatter and Jewelmutter are used. They “left” the Dwarven pantheon to become Greater Gods and the Dwarven people have never healed from that slight, although they would never dare to speak ill of their progenitors.
+
+*Ivmund* and *Crode* are the two gods representing the forms of weakness Dwarves hate the most, weakness in character and weakness in body, respectively. As such they are considered "evil," but not in a strict D&D alignment sense. Merely that they are gods that are reviled, although still feared. In general, I will do my best to *italicize* the "evil" gods and saints.
+
+In addition to the traditional gods, there are the Numen. Spirits associated with important places and things in the area. These are generally considered heretical by devout leaders of the traditional gods, but not to the same level as worship of the "evil" gods. For a list of all of the Gods, Saints and Numen see [Appendix D: Gods, Saints, and Numen](#p21). This list also includes the gods of the derro and duergar that are not available to the PCs.
+
+### List of Gods:
+
+<div class="noindent">
+
+**Steinvatter:** God of Creation, Craft and Exploration
+
+**Jewelmutter:** God of the Clan, Home, and Protection
+
+**Queen Erwer:** God of Honor, Duty and Integrity
+
+**Baurad:** God of Warfare, Glory and Battle
+
+**Walund:** God of Strength, Competition and Drinking
+
+***Ivmund:*** God of Selfishness, Deception and Theft
+
+***Crode:*** God of Decay, the Forgotten and Forgiveness
+
+</div>
+
+<img src='https://previews.dropbox.com/p/thumb/AAZmcbvO2-P10m4lid1JkIElIOk1Cbue0ggJ47PTMzeuz3RY3Xn_fNShToQ2kuB4FeyjZtDAZ5hJJCR1x0yqJIgMrCoNBhuxPtLjTjBCuQab6623xVrxukdr9nX-P7b9H7xwKWBd7BnAJ2M3H6wC1sOB8cGFstXFdp7L45zRB17jyeR9HgzEDuzJN4L1DxTAdprXBTbhpYXQpzrIQTwJw1_QAb0UDFBFl5mqAuyzu60FBNt7mRuNuJw4YxMbAZeA6GmU6FHDfFdwRD3VI2PJmYxUGC5ufCceszYJpF94Y_ENbB6A1opJ1EvwT0rVZuZdmV8Kp3jIh87tu_9eI7tQ6MBw/p.png?size_mode=5' style='position:absolute;bottom:40px;right:100px;width:600px'>
+
+\pagebreakNum
+### Saints by Domain
+#### Forge
+- St. Otto the Golden Hammer [Steinvatter]; Forging and Smithing
+- St. Notburga the Adamantine Nail [Steinvatter]; Perseverance
+
+#### Grave
+- St. Valkert the Martyr [Baurad]; Glory
+- St. Friedgund the Diamond [Jewerlmutter]; Protection
+- Einlil (Numen), Spirit and Death
+
+#### Knowledge
+- St. Otto the Golden Hammer [Steinvatter]; Forging and Smithing
+- St. Walpurgis the Silver Sextant [Steinvatter]; Exploration
+- St. Dietreich the Sapphire [Jewelmutter]; Lordship and Law
+- St. Siegbrecht the Swift [Baurad]; Strategy
+- *St. Gudrun the Chameleon [Ivmund]; Deception*
+- *St. Irmelin the Amnesiac [Crode]; Forgiveness*
+- La’um (Numen), Thought and Wisdom
+- Eza’e (Numen), Dreams and Beauty
+
+
+#### Life
+- St. Heinrick the Ruby [Jewelmutter]; the Home
+- St. Liebgard the Emerald [Jewelmutter]; Beauty
+- St. Mathilda the Mason [Erwer]; Generosity
+- St. Valkert the Martyr [Baurad]; Glory
+- St. Helgard the Stout [Walund]; Brewing and Singing
+- *St. Ydfreid the Infirm [Crode]; Frailty*
+- Einlil (Numen), Spirit and Death
+
+#### Light
+- St. Friedgund the Diamont [Jewelmutter]; Protection
+- St. Dietreich the Sapphire [Jewelmutter]; Lordship and Law
+- St. Gottschalk the Friar [Erwer]; Duty
+- St. Erkenbald the Witness [Erwer]; Justice
+- St. Adelheid the Oracle [Erwer]; Fairness
+- Utu (Numen), Fire and the Sun
+
+#### Nature
+- St. Liebgard the Emerald [Jewelmutter]; Beauty
+- St. Gerolf the Stalker [Walund]; the Hunt
+- St. Helgard the Stout [Walund]; Brewing and Singing
+- St. Yennefer the Peridot [Jewelmutter]; Patron of the Clanless and Travel
+- *St. Widukind the Vizier [Crode]; Neglect*
+- Einlil (Numen), Spirit and Death
+- Yani (Numen), Growth and Change
+- Eza’e (Numen), Dreams and Beauty
+
+\columnbreak
+
+#### Tempest
+- St. Notburga the Adamantine Nail [Steinvatter]; Perseverance
+- St. Eberharda the Vulgar [Walund]; Wrestling
+- St. Egmont the Tyrant [Baurad]; Conquest
+- St. Reinhilde the Vigilant [Baurad]; Feuds and Rivalry
+- St. Ishilde the Iron Helm [Steinvatter]; Bravery and Pride
+- Rohn (Numen), Earthquakes and Volcanoes
+- Oola (Numen), Monsoons and Floods
+
+#### Trickery
+- St. Walpurgis the Silver Sextant [Steinvatter]; Exploration
+- St. Yennefer the Peridot [Jewelmutter]; Patron of the Clanless and Travel
+- *St. Ortrun the Cuckoo [Ivmund]; Forgery and Envy*
+- *St. Nithard the Leech [Ivmund]; Sloth*
+- *St. Gerburg the Termite [Ivmund]; Luck*
+- La’um (Numen), Thought and Wisdom
+- Yani (Numen), Growth and Change
+
+#### War
+- St. Ishilde the Iron Helm [Steinvatter]; Bravery and Pride
+- St. Albrecht the Smith [Erwer]; Integrity
+- St. Siegbrecht the Swift [Baurad]; Strategy
+- St. Rochus the Rabid [Baurad]; Combat
+- St. Reinhilde the Vigilant [Baurad]; Feuds and Rivalry
+- *St. Bilktrud the Dragon [Ivmund]; Greed*
+- Utu (Numen), Fire and the Sun
+
+#### Undeath
+- *St. Grimwald the Withered [Crode]; Cowardice*
+
+
+## Society:
+
+Dwarven society is largely based around the concept of honor (hence the desire to add the Honor score as an attribute). Their most important deity, Erwer God of Honor, is considered the Queen of their pantheon. Importantly, neither the progenitor gods, the Steinvatter (Moradin) and Jewelmutter (Ulaa), are the most highly praised because your honor, and by extension your clan's honor, is what society cares about more than anything else. This was true even before Moradin and Ulaa slighted the dwarves and left to become "Greater Gods" causing their children to eschew using their names.
+
+Honor is gained through a variety of means but the two most common and pertinent are to be exceptional in craft or warfare.
+
+### Clans:
+
+Your clan is irrevocably linked to your trade. ... More to come ...
+<!--
+- Marriage
+- Heads of the family (CEO / CTO)
+- -->
+
+\pagebreakNum
+### Naming:
+Dwarvish (the language) is based heavily on the real-world German language. Keep that in mind when thinking of names. See [Appendix C: Common Dwarven Given Names](#p20) for ideas.
+
+#### Trade Names:
+Mechanically, your Clan name determines the tool with which you gain expertise. A large list of examples can be found in [Appendix A: Clan Names](#p17), but feel free to come up with your own.
+
+> ##### Stolen Name
+>
+> Previously a declaration of pride, ***stonebones*** has become a pejorative term towards dwarves by other races, most commonly
+elves and men. A ridicule of their short stature and literal bones made of stone that prevent them from swimming. Dwarves attribute their resilience against poison as a consequence of their unique skeletal structure.
+
+#### War Names:
+Those within the military complicate naming conventions further by adopting a new clan name, called their War Clan name, to breed comradery amongst the soldiers and signify their mastery of their specialty.
+
+If you choose to have a military background, you can
+
+... More to come ...
+
+<!--
+- War Clan
+- Battlename
+- Feats and proficiences
+- If you're a soldier, you will likely spend much of your downtime in battles
+-->
+See [Appendix B: War Clan Names](#p19).
+
+\columnbreak
+#### Noble Particles:
+
+There are two particles, additions to names inserted between the given name and clan name, used to denote nobility and high ranking military officials. A noble above the rank of Ritter (knight) or Herr (Lord/Lady) is given the particle "von," while a commander of the rank lieutenant or higher is given the particle "zur." Typically, if a nobleman is also an officer in the army, they include the noble particle over the military, but that is up to the individual.
+
+<div class='descriptive'>
+
+After leading the charge and liberating lands previously controlled by orcs, **Duretta Freirmaur** has been awarded said lands and anointed to the title ***Freiin Duretta von Freirmaur***. During the campaign, she rose to the rank of Lieutenant amongst the boar-riders and when being introduced to other military officers she prefers to use her war name: ***Leutnant Duretta zur Eberfahrer*** called **Tuskbasher** by her unit.
+</div>
+
+<img src='https://previews.dropbox.com/p/thumb/AAZfi4KRG1rjrAC52AuCJWExt3yl7cNmkSYvCVOYH8VOhBc2t3RQV0YEKkjv8pBqfbxYu67yLhbQSJhA2QB1CDJH4qHSp-ojEGknHbPA6pYCipTRoLximuDmFPtUJ-6Y0__Jsw-vnCutNf9p-m0NcPbZo3I9ermQAUQMPga4z3kEq8HLi_XMw0pBqb6lyZroWkHCAqoeVTyGVIgV9EMqiwKUlUhkf6ZxGuflX9_2cYFyFRfaQk8Eg0LadEt7FVsprbDE_csmzaLQO2KMjY6P-0CcAR8tZU1EoA3QoPCa3CoUXyFla884Tpopx8ynjyvgKxKlZBhtIqo2WblvmDC6AIyy/p.jpeg?size=2048x1536&size_mode=3' style='position:absolute;bottom:100px;right:60px;width:700px'>
+
+
+\pagebreakNum
+
+\pagebreakNum
+
+<div class='wide'>
+
+# Appendices
+</div>
+
+## Appendix A: Clan Names
+<div class = "wide", style='column-count:2'>
+
+|Craft | Name| Tool |
+|:---|:---|:---|
+|Abbot|Abt|Priest’s Supplies|
+|Acrobat|Turner|Climbing Kit|
+|Alchemist|Alchemist|Alchemist’s Supplies|
+|Apothecary|Apotheker|Herbalism Kit|
+|Architect|Baumeister|Drafting’s Tools|
+|Astrologer|Astromanten|Navigator’s Tools|
+|Baker|Backer|Cook’s Utensils|
+|Banker|Bankier|Abacus|
+|Barber|Barbier||
+|Barrister|Rechtsanwalt|Legal Code|
+|Blacksmith|schmied|Smith’s Tools|
+|Bleacher|Bleicher|Calligrapher's Tools|
+|Bookbinder|Buchbinder|Calligrapher's Tools|
+|Bottler|Abfuller|Glassblower’s Tools|
+|Brewer|Brauer|Brewer’s Supplies|
+|Bricklayer|Mauer|Mason’s Tools|
+|Butcher|Fleischer|Cook’s Utensils|
+|Butler|Diener||
+|Calligrapher|Kalligraph|Calligrapher’s Supplies|
+|Candle maker|Kerzenmacher|Waxmaker’s Tools|
+|Carpenter|Zimmermann|Carpenter’s Tools|
+|Cartographer|Kartenzeichner|Cartographer’s Tools|
+|Cattle farmer|Bauer|Farmer’s Tools|
+|Chamberlain|Kammerherr|Priest’s Supplies|
+|Chandler|Chandler|Waxmaker’s Tools|
+|Chaplain|Kaplan|Priest’s Supplies|
+|Clothier|Tuchmacher|Weaver’s Tools|
+|Cobbler|Schuhmachen|Cobbler’s Tools|
+|Cook/Chef|Koch|Cook’s Utensils|
+|Cutler|Besteck|Cook’s Utensils|
+|Diplomat|Vermittler|Calligrapher’s Supplies|
+|Dyer|Farber|Weaver’s Tools|
+|Enchanter|Zauberer|Mage's Supplies|
+|Engineer|Ingenieur|Abacus|
+|Engraver|Graveur|Mason’s Tools|
+|Falconer|Falkner||
+|Farrier|Hufschmied|Navigator’s Tools|
+|Fishmonger|Fischhandler|Fishing Supplies|
+|Fletcher/Bowyer|Fleshier|Woodcarver’s Tools|
+
+|Craft | Name| Tool |
+|:---|:---|:---|
+|Forester|Forster|Woodcarver’s Tools|
+|Furrier|Kurschner|Leatherworker’s Tools|
+|Gatherer|Sammler||
+|Glassblower|Glasblaser|Glassblower’s Tools|
+|Glover||Leatherworker’s Tools|
+|Goldsmith|Goldschmied|Smith’s Tools|
+|Grain farmer|Pachter|Farmer’s Tools|
+|Gravedigger|Grabrauber||
+|Groom|Brautigam||
+|Guard/Lawman|Schutz|Legal Code|
+|Herald|Herold||
+|Herbalist|Karuterkunde|Herbalism Kit|
+|Herder|Hirte|Farmer’s Tools|
+|Hunter|Jager|Navigator’s Tools|
+|Innkeeper|Gastwirt|Brewer’s Supplies|
+|Jester|Narr|A Musical Instrument|
+|Jeweler|Juwelier|Jeweler’s Tools|
+|Judge|Richter|Legal Code|
+|Lady-in-waiting|Oberhofmeisterin||
+|Lawyer|Anwalt|Legal Code|
+|Leatherworker|Leder|Leatherworker’s Tools|
+|Librarian|Bibliothekar|Calligrapher’s Supplies|
+|Locksmith|Schlosser|Theives’ Tools (locks only)|
+|Mage|Zauberer|Mage's Supplies|
+|Mason|Freimaurer|Mason’s Tools|
+|Mews|Stallungen||
+|Miller|Muller|Carpenter’s Tools|
+|Miner|Bergarbeiter|Miner’s Tools|
+|Monk|Monch|Priest’s Supplies|
+|Painter|Ansteicher|Painter’s Supplies|
+|Parchmenter|Pergamentierer|Calligrapher’s Tools|
+|Plasterer|Stuckateur|Mason’s Tools|
+|Potter|Topfer|Potter’s Tools|
+|Priest|Priester|Priest’s Supplies|
+|Quarryman|Steinhauer|Mason’s Tools|
+|Roofer|Dachdecker|Carpenter’s Tools|
+|Ropemaker|Seiltanzer|Weaver’s Tools|
+|Scribe|Schreiber|Calligrapher’s Tools|
+|Scullion|Elender|Cook's Utensils|
+
+</div>
+
+\pagebreakNum
+|Craft | Name| Tool |
+|:---|:---|:---|
+|Servant|Diener||
+|Reeve|||
+|Silversmith|Silberschmied|Smith’s Tools|
+|Smelter|Schmelzer|Smith’s Tools|
+|Spinster|Jungfer||
+|Squire|Knappe||
+|Stablehand|Stallknecht||
+|Steward|||
+|Stonecutter|Steinmetz|Mason’s Tools|
+|Tailor|Schneider|Weaver’s Tools|
+|Tanner|Gerber|Leatherworker’s Tools|
+|Tinker|Basteln|Tinker’s Tools|
+|Trader|Handler||
+|Treasurer|Schatzmeister|Abacus|
+|Watchman|Watcher||
+|Weaver|Weber|Weaver’s Tools|
+|Wheelwright|Radenhmer|Carpenter’s Tools|
+
+\pagebreakNum
+<div class="wide">
+
+## Appendix B: War Clan Names
+
+| Division | Name | Weapon / Skill | Potential Feats |
+|:---|:---|:---|:---:|
+|Archer|Bogenschutze|Bows|Sharpshooter|
+|Axe|Streitaxt|Axes|Fell Handed*|
+|Boar-rider|Eberfahrer|Mounts|Charger, Mounted Combatant|
+|Cavalier|Kavalier|Lance, Mounts|Mounted Combatant, Polearm Master|
+|Commander|Komturei|Mounts|Inspiring Leader, Mounted Combatant|
+|Crossbowman|Armbrustschutze|Crossbows|Crossbow Expert, Sharpshooter|
+|Flail|Flegel|Flails|Flail Mastery*|
+|Halberd|Hellebarde|Polearms|Polearm Master|
+|Hammer|Maul|Hammers|Fell Handed*|
+|Infantry|Infanteristen|Simple Weapons|Martial Adept, Medium Armor Master, Shield Master|
+|Knight|Ritter|Mounts|Martial Adept, Mounted Combatant, Sentinel, Shield Master|
+|Man-at-arms|Banner|-|Inspiring Leader|
+|Marshall|Polizist|Mounts|Inspiring Leader, Mounted Combatant|
+|Medic|Medizin|-|Healer|
+|Officer|Offizier|Mounts|Inspiring Leader, Mounted Combatant|
+|Pikeman|Lanze|Polearms|Polearm Master|
+|Scout|Erkunden|Survival|Medium Armor Master, Mobile, Skulker|
+|Siege|Belgerung|Siege|(TBD)|
+|Spearman|Speer|Thrown|Spear Mastery*|
+</div>
+
+*In [Unearthed Arcana Feats](http://dnd.wizards.com/articles/features/feats)
+
+\pagebreakNum
+<div class="wide">
+
+## Appendix C: Common Dwarvish Given Names
+|Male Names | Male Names | Female Names | Female Names |
+|:---|:---|:---|:---|
+|Albrecht|Kilian|Adelhayt|Genefe|
+|Allexander|Linhart|Affra|Geras|
+|Baltasar|Lorentz|Agatha|Gerhauss|
+|Benedick|Ludwig|Allet|Gertrudt|
+|Berhart|Marx|Angnes|Guttel|
+|Caspar|Melchor|Anna|Helena|
+|Clas|Mertin|Apell|lrmel|
+|Cristin|Michel|Applonia|Jonata|
+|Cristoff|Moritz|Barbara|Katerina|
+|Dieterich|Osswald|Brida|Kuen|
+|Engelhart|Ott|Brigita|Kungund|
+|Erhart|Peter|Cecilia|Lucia|
+|Felix|Rudolff|Clara|Madalena|
+|Frantz|Ruprecht|Cristina|Magdalen|
+|Fritz|Sewastian|Dorothea|Margret|
+|Gerhart|Sigmund|Duretta|Marlein|
+|Gotleib|Steffan|Ella|Martha|
+|Hans|Symon|Els|Otilia|
+|Hartmann|Thoman|Elsbeth|Ottilg|
+|Heintz|Ulrich|Engel|Peternella|
+|Herman|Vallentin|Enlein|Reusin|
+|Jacob|Wendel|Enndlin|Sibilla|
+|Jeremias|Wilhelm|Eva|Ursel|
+|Jorg|Wolff|Fela|Vrsula|
+|Karil|Wolfgang|Fronicka|Walpurg|
+</div>
+
+\pagebreakNum
+<div class='wide'>
+
+## Appendix D: Gods, Saints and Numen
+</div>
+
+<div class='classTable wide'>
+
+##### Traditional Gods
+
+|**God**|**Steinvatter (Moradin)**|**Jewelmutter (Ulaa)**|**(Queen) Erwer**|**Baurad**|**Walund**|***Ivmund***|***Crode***|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|**Domain**|***Creation and Craft***|***Clan and Family***|***Honor***|***Warfare***|***Strength and Competition***|***Selfishness***|***Decay and the Forgotten***|
+|**Saint (Domain)**|Otto the Golden Hammer (Forging and Smithing)|Liebgard the Emerald (Beauty)|Gottschalk the Friar (Duty)|Siegbrecht the Swift (Strategy)|Eberharda the Vulgar (Wrestling)|*Ortrun the Cuckoo (Envy)*|*Widukind the Vizier (Neglect)*|
+|**Saint (Domain)**|Ishelde the Iron Helm (Bravery and Pride)|Friedgund the Diamond (Protection)|Mathilda the Mason (Generosity)|Valkert the Martyr (Glory)|Helgard the Stout (Brewing / Singing)|*Gudrun the Chameleon (Deception)*|*Ydfreid the Infirm (Frailty)*|
+|**Saint (Domain)**|Walpurgis the Silver Sextant (Exploration)|Heinrick the Ruby (the Home)|Albrecht the Smith (Integrity)|Adelheid the Oracle (Fairness)|Rochus the Rabid (Combat)|*Nithard the Leech (Sloth)*|*Irmelin the Amnesiac (Forgiveness)*|
+|**Saint (Domain)**|Notburga the Adamantine Nail (Perseverance)|Dietreich the Sapphire (Lordship and Law)|Erkenbald the Witness (Justice)|Egmont the Tyrant [Master] (Conquest)|Reinhilde the Vigilant (Feuds and Rivalry)|*Bilktrud the Dragon (Greed)*|*Grimwald the Withered (Cowardice)*|
+|**Saint (Domain)**|???|Yennefer the Peridot (Clanless and Travel)|???|??? the ??? (Honor in Battle?)|Gerolf the Stalker (the Hunt)|*Gerburg the Termite (Luck)*|*???*|
+<!--Change Fairness to Honor in Battle? Rename Fairness?-->
+
+##### Heretical Gods
+
+|**God (Worshippers)**|**Guncz'zt (Derro)**|**Thiadrad (Duergar)**|**Ecknath (Duergar)**|
+|:---:|:---:|:---:|:---:|
+|**Domain**|***Madness, Chaos and Anarchy***|***Domination and Tyranny***|***Persistence(?)***|
+|**Saint (Domain)**|Wiprecht the Chaplain (Protest)|??? the ??? (“Fear”)|??? the ??? (Evasion)|
+|**Saint (Domain)**|Gwynplaine the Jester (Slaughter and Arson)|??? the ??? (Oppression)|??? the Imperishable; the Vampire-Saint (Unlife)|
+|**Saint (Domain)**|??? the Vassal (Anarchy)|??? the ??? (Cruelty)|??? the ??? (Bluffing)|
+
+##### The Old Gods - Numen
+
+|**"God"/ Numen**|**Domain**|**Worshipped "Landmark"**|
+|:---:|:---:|:---:|
+|Utu|Fire and the Sun|The Sun|
+|Rohn|Earthquakes and Volcanoes|Mt. Zugspitze|
+|La'um|Thought and Wisdom|Lauchert River|
+|Einlil|Spirt and Death|The Moons|
+|Oota|Monsoons and Floods|Lake Schwedtsee|
+|Yani|Growth and Change|?|
+|Ot|?|?|
+|Eza'e|Dreams and Beauty|The Stars|
+|Kut|?|?|
+</div>
+
+<div class="pageNumber">21</div>
